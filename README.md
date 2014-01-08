@@ -3,7 +3,7 @@ component-textbox
 
 [![Build Status](https://travis-ci.org/mozilla-appmaker/component-textbox.png)](https://travis-ci.org/mozilla-appmaker/component-textbox)
 
-Basic button component for [Appmaker](https://github.com/mozilla-appmaker/appmaker).
+Basic Text box component for [Appmaker](https://github.com/mozilla-appmaker/appmaker).
 
 Appmaker import:
 ```
@@ -125,7 +125,7 @@ execute: {
   click: function (channel) {
     var e = iframeHandler.document.createEvent('MouseEvents');
     e.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, true, false, false, true, 0, null);
-    buttonElement.$.button.dispatchEvent(e);
+    textBoxElement.$.textBox.dispatchEvent(e);
   }
 },
 check: {
@@ -197,23 +197,23 @@ Most of this file doesn't need to be altered. However, if any filenames change, 
 ## `test/js/tests.js`
 This is the root testing file. It contains tests to run, and mechanisms to spawn iframes. e.g.
 ```
-  var iframeHandler, buttonElement;
+  var iframeHandler, textBoxElement;
 
   beforeEach(function (done) {
     iframeHandler = harnessUtils.createIframe('test/html/test.html', function (win, doc) {
-      buttonElement = iframeHandler.document.querySelector('ceci-button');
+      textBoxElement = iframeHandler.document.querySelector('ceci-textbox');
       done();
     });
   });
 
-  describe('Ceci Button', function () {
+  describe('Ceci Text Box', function () {
     test('Sanity check', function (done) {
-      chai.assert(buttonElement.ceci, 'Ceci descriptor exists.');
+      chai.assert(textBoxElement.ceci, 'Ceci descriptor exists.');
       iframeHandler.runIframeTest('Sanity Check', done);
     });
 
     test('Broadcasts', function (done) {
-      iframeHandler.testBroadcasts(buttonElement, done, {
+      iframeHandler.testBroadcasts(textBoxElement, done, {
         //see testBroadcasts in harndess-utils.js description below
       });
     });
@@ -242,7 +242,7 @@ You can then include and instance of this repo's element in the document body:
 ```
 <body>
   <!-- The skeleton app we'll be using to test -->
-  <ceci-button id="ceci-button" value="you must construct additional pylons"></ceci-button>
+  <ceci-textbox id="ceci-textbox" value="you must construct additional pylons"></ceci-textbox>
 </body>
 </html>
 ```
@@ -257,10 +257,10 @@ Then, make sure `iframeTestUtils` is called, which will queue named tests to be 
 <script>
   iframeTestUtils(function () {
     test('example', function (done) {
-      var buttonElement = document.querySelector('ceci-button');
-      chai.assert(buttonElement.$.button, 'Button recognized and exposed by Polymer.');
-      chai.assert(buttonElement.ceci.broadcasts, 'Ceci broadcasts publicized.');
-      chai.assert(buttonElement.ceci.listeners, 'Ceci listeners publicized.');
+      var textBoxElement = document.querySelector('ceci-textbox');
+      chai.assert(textBoxElement.$.textBox, 'Text box recognized and exposed by Polymer.');
+      chai.assert(textBoxElement.ceci.broadcasts, 'Ceci broadcasts publicized.');
+      chai.assert(textBoxElement.ceci.listeners, 'Ceci listeners publicized.');
       done();
     });
   });
