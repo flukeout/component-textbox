@@ -1,0 +1,20 @@
+:host {
+  display: block;
+  width: 90%;
+  height: 25px;
+  margin: 2px 0;
+}
+
+ceci-textbox {
+  padding: .5rem 1.5rem;
+}
+
+ceci-textbox p {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "FiraSans", sans-serif;
+  font-weight: 500;
+  line-height: auto;
+}

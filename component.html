@@ -1,0 +1,40 @@
+<polymer-element name="ceci-textbox" attributes="text" extends="ceci-element" text="I'm a text box.">
+  <template>
+    <link rel="stylesheet" href="component.css"></link>
+    <p id="textBox"></p>
+    <shadow></shadow>
+    <script type="text/json" id="ceci-definition">
+      {
+        "tags": ["form", "input", "text"],
+        "thumbnail": "./thumbnail.png",
+        "broadcasts": {},
+        "listeners": {
+          "setValue": {
+            "description": "Set value text box",
+            "label": "Set Value"
+          }
+        },
+        "attributes": {
+          "text": {
+            "label": "Text",
+            "description": "A text for your label to show up in your app.",
+            "editable": "text",
+            "listener": true
+          }
+        }
+      }
+    </script>
+  </template>
+  <script>
+    Polymer('ceci-textbox', {
+      ready: function () {
+        this.super();
+        this.$.textBox.innerHTML = this.text;
+        this.$.textLabel = this.text;
+      },
+      textChanged: function (oldValue, newValue) {
+        this.$.textBox.innerHTML = newValue;
+      }
+    });
+  </script>
+</polymer-element>
