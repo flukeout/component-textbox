@@ -1,22 +1,22 @@
 (function () {
-  var buttonElement;
+  var textBoxElement;
   var iframeHandler;
 
   beforeEach(function (done) {
     iframeHandler = harnessUtils.createIframe('test/html/test.html', function (win, doc) {
-      buttonElement = iframeHandler.document.querySelector('ceci-textbox');
+      textBoxElement = iframeHandler.document.querySelector('ceci-textbox');
       done();
     });
   });
 
-  describe('Ceci Button', function () {
+  describe('Ceci Text Box', function () {
     test('Sanity check', function (done) {
-      chai.assert(buttonElement.ceci, 'Ceci descriptor exists.');
+      chai.assert(textBoxElement.ceci, 'Ceci descriptor exists.');
       iframeHandler.runIframeTest('Sanity Check', done);
     });
 
     test('Listeners', function (done) {
-      iframeHandler.testListeners(buttonElement, done, {
+      iframeHandler.testListeners(textBoxElement, done, {
         check: {
           setValue: function (e, channel) {
             chai.assert(true);
