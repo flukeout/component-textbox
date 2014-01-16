@@ -1,4 +1,4 @@
-<polymer-element name="ceci-textbox" attributes="text" extends="ceci-element" text="I'm a text box.">
+<polymer-element name="ceci-textbox" attributes="text" extends="ceci-element" text="I'm a textbox!">
   <template>
     <link rel="stylesheet" href="component.css"></link>
     <p id="textBox"></p>
@@ -7,6 +7,7 @@
       {
         "tags": ["form", "input", "text"],
         "thumbnail": "./thumbnail.png",
+        "name": "Text",
         "broadcasts": {},
         "listeners": {
           "setValue": {
@@ -29,7 +30,6 @@
     Polymer('ceci-textbox', {
       ready: function () {
         this.super();
-        this.$.textBox.innerHTML = this.text;
       },
       textChanged: function (oldValue, newValue) {
         this.$.textBox.innerHTML = newValue;
