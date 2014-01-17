@@ -1,6 +1,6 @@
 {
-	"ceci-textbox": "กล่องข้อความ",
-	"ceci-textbox/attributes/text": "ข้อความ",
-	"ceci-textbox/attributes/text/label": "นี้คือป้ายข้อความ",
-	"ceci-textbox/attributes/text/description": "ป้อนข้อความ"
+    "ceci-textbox": "ข้อความ",
+    "ceci-textbox/attributes/text": "ฉันเป็นกล่องข้อความ!",
+    "ceci-textbox/attributes/text/label": "ข้อความ",
+    "ceci-textbox/attributes/text/description": "ข้อความของฉลากของคุณที่จะแสดงในแอพของคุณ"
 }

@@ -1,0 +1,6 @@
+{
+    "ceci-textbox": "Texto",
+    "ceci-textbox/attributes/text": "Eu sou uma caixa de texto!",
+    "ceci-textbox/attributes/text/label": "Texto",
+    "ceci-textbox/attributes/text/description": "Um texto para o seu rótulo aparecer no seu aplicativo."
+}
