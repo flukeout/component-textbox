@@ -1,8 +1,9 @@
 :host {
   display: block;
   width: 90%;
-  height: 25px;
+  height: auto;
   margin: 2px 0;
+  word-wrap: break-word;
 }
 
 ceci-textbox {
