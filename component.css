@@ -1,20 +1,17 @@
 :host {
   display: block;
-  width: 90%;
-  height: auto;
-  margin: 2px 0;
+  width: 100%;
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:host p {
   word-wrap: break-word;
-}
-
-ceci-textbox {
-  padding: .5rem 1.5rem;
-}
-
-ceci-textbox p {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 15px;
   font-family: "FiraSans", sans-serif;
   font-weight: 500;
   line-height: auto;

@@ -32,6 +32,9 @@
       ready: function () {
         this.super();
       },
+      setValue: function(e) {
+        this.text = e;
+      },
       textChanged: function (oldValue, newValue) {
         this.$.textBox.innerHTML = newValue;
       }
